@@ -91,5 +91,7 @@ Botones de categoría en la parte superior (All, Design, Tech, Lifestyle, Editor
 **Agregar una página nueva** — duplicar un bloque `.card` en el HTML y actualizar el `href`, número, título y gradiente.
 
 ---
+- TRABAJO GRUPO
+- https://github.com/CondezPancake/GroupHTML-CSS-CPC.git
 
 *Menú de portafolio — HTML & CSS — 2024*
