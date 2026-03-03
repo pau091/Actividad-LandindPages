@@ -1,0 +1,269 @@
+body {
+    margin: 0;
+    padding: 30px 30px;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    background-color: #f4f4f4;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+}
+
+#contenido{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+#parrafo{
+    margin-left: 2.5vw;
+    color: black;
+    width: 30vw;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.4vw;
+    z-index: 1;
+}
+
+#imagen{
+    width: 27vw;
+    position: absolute;
+    right: 19vw;
+    top: 8vw;
+    z-index: 3;
+    filter: drop-shadow(5px 5px 20px rgba(0,0,0,0.5));
+}
+
+#dog-paw{
+    width: 10vw;
+    position: absolute;
+    right: 45vw;
+    top: 32vw;
+    z-index: 2;
+}
+
+#asterisk{
+    width: 15vw;
+    position: absolute;
+    right: 10vw;
+    top: 12vw;
+    z-index: 2;
+}
+
+#shape{
+    width: 35vw;
+    position: absolute;
+    right: 15vw;
+    top: 16vw;
+    z-index: 1;
+
+}
+
+#blob{
+    width: 32vw;
+    position: absolute;
+    top: 2vw;
+    border-top-left-radius: 35px;
+    left: 2vw;
+    z-index: 0;
+}
+
+#font{
+    position: absolute;
+    right: 45%;
+    top: 20px;
+    z-index: 0;
+}
+
+#titulo{
+    margin-top: 10vw;
+    margin-left: 2.5vw;
+    width: 50vw;
+    color: black;
+    font-size: clamp(5px, 2vw, 25px);
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    z-index: 1;
+    font-style: normal;
+}
+
+#boton{
+    margin-top: 2.5vw;
+    margin-left: 2.5vw;
+    background-color: #333333;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 6px 6px 0 0 black;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    width: 100px;
+}
+
+#boton:hover{
+    color: #ffffff;
+    background-color: rgb(72, 72, 72);
+    width: 152px;
+    height: 52px;
+
+}
+
+#cards {
+    margin-top: 10vw;
+    background-color: #ffffff;
+    color: black;
+    width: 95vw;
+    height: auto;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+    border: solid 1px black;
+}
+
+#cards p{
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: max(0.9vw, 5px);
+}
+
+
+.cardclass{
+    display: flex;
+    align-items: center;
+    width: 50vw;
+}
+
+.cardclass img{
+    width: 10vw;
+    padding: 1vw 2vw;
+}
+
+
+@media (max-width: 1024px) {
+
+    #titulo {
+      width: 80%;
+      margin-top: 12vw;
+      font-size: clamp(16px, 3vw, 22px);
+    }
+  
+    #parrafo {
+      width: 70%;
+      font-size: 16px;
+    }
+  
+    #imagen {
+      position: relative;
+      width: 60%;
+      right: auto;
+      top: auto;
+      display: block;
+      margin: 40px auto;
+    }
+  
+    #dog-paw,
+    #asterisk,
+    #shape {
+      display: none;
+    }
+  
+    #blob {
+      width: 60%;
+      position: relative;
+      left: auto;
+      top: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  
+    #cards {
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      margin: 60px auto 0 auto;
+    }
+  
+    .cardclass {
+      width: 100%;
+      justify-content: center;
+      padding: 20px;
+    }
+  
+    .cardclass img {
+      width: 120px;
+    }
+  
+  }
+
+  @media (max-width: 768px) {
+
+    body {
+      padding: 20px;
+    }
+  
+    #titulo {
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 60px;
+      font-size: 20px;
+    }
+  
+    #parrafo {
+      width: 90%;
+      margin-left: 5%;
+      font-size: 14px;
+    }
+  
+    #boton {
+      margin-left: 5%;
+      width: 180px;
+      height: 45px;
+    }
+  
+    #cards {
+      margin-top: 40px;
+    }
+  
+    .cardclass {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .cardclass img {
+      width: 100px;
+      padding: 10px 0;
+    }
+  
+  }
+  @media (max-width: 480px) {
+
+    #titulo {
+      font-size: 18px;
+    }
+  
+    #parrafo {
+      font-size: 13px;
+    }
+  
+    #boton {
+      width: 160px;
+      height: 42px;
+    }
+  
+    a {
+      font-size: 14px;
+    }
+}  

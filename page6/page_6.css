@@ -1,0 +1,241 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black: #0d0d0d;
+  --white: #f7f6f3;
+  --purple: #7c5cfc;
+  --purple-light: #a78bfa;
+  --gray: #e8e6e1;
+  --text-muted: #666;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--white);
+  color: var(--black);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 40px 48px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  margin-bottom: 56px;
+}
+
+.logo-circle {
+  width: 56px;
+  height: 56px;
+  
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+}
+
+
+
+.logo-circle svg { width: 44px; height: 44px; }
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.hero-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.hero-desc {
+  font-size: 0.93rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  max-width: 380px;
+  margin-bottom: 32px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  border-radius: 100px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+.btn-primary:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.28); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--black);
+  border: 1.5px solid var(--black);
+}
+
+.btn-outline:hover { background: rgba(0,0,0,0.04); }
+
+.hero-right {
+  position: relative;
+  height: 420px;
+}
+
+.starburst {
+  position: absolute;
+  top: -6vw;
+  left: -4vw;
+  width: 1vw;
+  height: 1vw;
+  z-index: 3;
+  
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.08) rotate(8deg); }
+}
+
+.card-back {
+  position: absolute;
+  top: 7vw;
+  right: 3vw;
+  width: 11vw;
+  height: 15vw;
+  border: 1.5px solid var(--black);
+  border-radius: 24px;
+  background: var(--white);
+  z-index: 1;
+}
+
+.card-up {
+  position: absolute;
+  top: -3vw;
+  right: 7vw;
+  width: 300px;
+  height: 360px;
+  border: 1.5px solid var(--black);
+  border-radius: 24px;
+  background: var(--white);
+  z-index: 0;
+}
+
+.card-main {
+  position: absolute;
+  top: 8px;
+  left: 20px;
+  width: 300px;
+  height: 360px;
+  border-radius: 24px;
+  background: var(--black);
+  overflow: hidden;
+  z-index: 2;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.32);
+}
+
+.card-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.sparkle-tl {
+  position: absolute;
+  top: 1vw;
+  left: 1vw;
+  width: 5vw;
+  height: 5vw;
+  z-index: 3;
+}
+ .sparkle-br {
+  position: absolute;
+  bottom: 3vw;
+  right: 2vw;
+  width: 2vw;
+  height: 2vw;
+  z-index: 3;
+}
+
+
+
+
+.badge {
+  position: absolute;
+  background: var(--purple);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: 100px;
+  white-space: nowrap;
+  z-index: 4;
+  box-shadow: 0 4px 14px rgba(124,92,252,0.4);
+}
+
+.badge-award { top: 90px; right: -12px; }
+.badge-ergo  { bottom: 100px; left: 0px; }
+
+.features-bar {
+  border: 1.5px solid var(--black);
+  border-radius: 16px;
+  padding: 20px 28px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  width: 1vw;
+  gap: 1.5vw;
+}
+
+.feature-item .icon {
+  font-size: 1.1rem;
+  margin-bottom: 2px;
+}
+
+.feature-item .label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+@media (max-width: 680px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { height: 340px; }
+  .features-bar { grid-template-columns: repeat(2, 1fr); }
+}
